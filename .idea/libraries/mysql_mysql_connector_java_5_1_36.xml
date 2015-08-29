@@ -2,11 +2,11 @@
   <library name="mysql:mysql-connector-java:5.1.36" type="repository">
     <properties maven-id="mysql:mysql-connector-java:5.1.36" />
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.36.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.36/mysql-connector-java-5.1.36.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.36-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.36/mysql-connector-java-5.1.36-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
