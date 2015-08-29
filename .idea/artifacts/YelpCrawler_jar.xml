@@ -2,12 +2,9 @@
   <artifact type="jar" name="YelpCrawler:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/YelpCrawler_jar</output-path>
     <root id="archive" name="YelpCrawler.jar">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/src/com/META-INF/MANIFEST.MF" />
-      </element>
       <element id="module-output" name="YelpCrawler" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jsoup-1.8.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-5.1.36.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.36/mysql-connector-java-5.1.36.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.8.3/jsoup-1.8.3.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
