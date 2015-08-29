@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - Yelp@localhost" uuid="8a20d499-035e-498f-b11e-7fb0b6412020">
+    <database-info product="MySQL" version="5.6.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="yelp"/>
+    <table name="eliteof" schema="" catalog="yelp" type="TABLE">
+      <column name="Year" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="idUser" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Year,idUser"/>
+      <foreign-key name="FK_User" columns="idUser" ref-table="user" ref-schema="" ref-catalog="yelp" ref-columns="idUser" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_User_idx" unique="false" columns="idUser"/>
+    </table>
+    <table name="queue" schema="" catalog="yelp" type="TABLE">
+      <column name="idQueue" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="idUser" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="FriendOf" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idQueue"/>
+      <index name="idUser_UNIQUE" unique="true" columns="idUser"/>
+    </table>
+    <table name="user" schema="" catalog="yelp" type="TABLE">
+      <column name="idUser" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Username" sqlType="VARCHAR" precision="80" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Friends" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Reviews" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ReviewUpdates" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Firsts" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Follower" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Photos" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Lists" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Location" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="RegistrationDate" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Hometown" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ComplimentProfile" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ComplimentCute" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ComplimentFunny" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ComplimentPlain" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ComplimentWriter" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ComplimentList" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ComplimentNote" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ComplimentPhotos" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ComplimentHot" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ComplimentCool" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ComplimentMore" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ComplimentsTotal" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="PopularityScore" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <primary-key name="PRIMARY" columns="idUser"/>
+      <exported-key name="FK_User" table="eliteof" schema="" catalog="yelp" columns="idUser"/>
+    </table>
+  </data-source>
+</component>
