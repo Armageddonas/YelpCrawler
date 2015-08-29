@@ -27,7 +27,6 @@ public class Main {
         } else {
             MainForm mf = new MainForm();
             mf.main(null);
-            System.out.println("Test");
         }
     }
 }
